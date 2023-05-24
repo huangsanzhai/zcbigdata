@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <script type="text/javascript" src="js/rem.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <title>虚假信息快速检测和溯源系统</title>
+</head>
+
+<body style="visibility: hidden;">
+    <div class="container-flex" tabindex="0" hidefocus="true">
+        <div class="box-left">
+            <div class="left-top">
+                <div class="current-num">
+                    <div>当前比对数据</div>
+                    <p>5123,456,789</p>
+                </div>
+            </div>
+            <div class="left-center">
+                <div class="title-box">
+                    <h6>网络虚假信息分类</h6>
+                </div>
+                <div class="chart-box pie-chart" style="">
+                    <div id="pie_fanzui" style="width:100%;"></div>
+                    
+                </div>
+            </div>
+            <div class="left-bottom" class="select">
+                <div class="title-box">
+                    <h6>虚假信息跟踪记录</h6>
+                    
+                </div>
+                <div class="chart-box">
+                    <table class="table3">
+                    <thead>
+                        <tr>
+                            <th>平台</th>
+                            <th>跟踪条数</th>
+                            <th>拦截条数</th>
+							<th>时间</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tList">
+<!--<tr><td colspan="4"><p style="width:9.6rem;">暂无数据</p></td></tr>-->
+                 
+                   <tr>
+                       <td>抖音</td>
+                       <td>854672</td>
+                       <td>62384</td>
+					   <td>5月21日</td>
+                   </tr>
+                   <tr>
+                       <td>微信公众平台</td>
+                       <td>131367/td>
+                       <td>34345</td>
+                       <td>5月21日</td>
+                   </tr>
+                   <tr>
+                        <td>微博</td>
+                       <td>145361</td>
+                       <td>32356</td>
+                       <td>5月21日</td>
+                   </tr>
+                   <tr>
+                       <td>知乎</td>
+                       <td>265324</td>
+                       <td>43632</td>
+                      <td>5月21日</td>
+                   </tr>
+				   <tr>
+				       <td>其他平台</td>
+				       <td>2326532</td>
+				       <td>32362</td>
+				      <td>5月21日</td>
+				   </tr>
+                  
+                    </tbody>
+                </table>
+                
+                </div>
+            </div>
+        </div>
+        <div class="box-center">
+            <div class="center-top">
+                <h1>虚假信息快速检测和溯源系统</h1>
+            </div>
+            <div class="center-center">
+                <div class="weather-box">
+                    <div class="data">
+                        <p class="time" id="time">00:00:00</p>
+                        <p id="date"></p>
+                    </div>
+                    <div class="weather">
+                        <img id="weatherImg" src="images/weather/weather_img01.png" alt="">
+                        <div id="weather">
+                            <p class="active">多云</p>
+                            <p>16-22℃</p>
+                            <p>天津市静海区</p>
+                        </div>
+                    </div>
+                </div>
+                <img src="images/line_bg.png" alt="">
+                <div class="select-box" style="height: 0.3rem;">
+                    
+                    <div data-type="2">
+                        <div class="select" tabindex="0" hidefocus="true" >
+                           <p style="color:#FFFF00;font-weight:bold;">NO.1北京：8543289条</p>
+                           <p style="color:#7FFF00;font-weight:bold;">NO.2天津：6545690条</p>
+                           <p style="color:#7FFFD4;font-weight:bold;">NO.3河北：3425456条</p>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="center-bottom">
+                <div class="chart-box">
+                    <div id="china_map" style="width:100%;height:95%;"></div>
+                </div>
+                
+            </div>
+
+        </div>
+        <div class="box-right">
+            <div class="right-top">
+                <div class="title-box">
+                    <h6 id="barTitle">虚假信息来源平台</h6>
+                    
+                </div>
+                <p class="unit">单位：万条</p>
+                <div class="chart-box">
+                    <div id="pie_age" style="width:100%;height:100%;"></div>
+                </div>
+                
+            </div>
+            <div class="right-center">
+            	
+                <div class="title-box">
+                    <h6>虚假信息地区发布量</h6>
+                </div>
+                <div class="chart-box pie-chart">
+                    
+                    <div id="qufenbu_data"style="width:90%;height:120px;margin-left:10px;"></div>
+                    
+                </div>
+            </div>
+            
+            
+            <div class="right-bottom">
+                <div class="title-box">
+                	<p id="switchBtn"><span class="active" data-dataType="income">虚假信息出现时间段统计</span></p>
+                    
+                </div>
+                <div id="line_time" style="width:90%;height:160px;margin-left:10px;"></div>
+                
+            </div>
+        </div>
+    </div>
+    
+</body>
+<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="js/layer/layer.min.js"></script>
+<script type="text/javascript" src="js/layer/laydate/laydate.js"></script>
+<script type="text/javascript" src="js/echarts.min.js"></script>
+<script type="text/javascript" src="js/china.js"></script>
+<script type="text/javascript" src="js/infographic.js"></script>
+<script type="text/javascript" src="js/macarons.js"></script>
+<script type="text/javascript" src="js/shine.js"></script>
+<script type="text/javascript" src="js/base.js"></script>
+
+<script type="text/javascript">
+    $('document').ready(function () {
+        $("body").css('visibility', 'visible');
+        var localData = [$('#teacher').val(), $('#start').val() + '/' + $('#end').val(), $('#leader').val()]
+        localStorage.setItem("data", localData);
+        
+    })
+</script>
+
+
+
+</html>
